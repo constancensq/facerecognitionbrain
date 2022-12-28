@@ -23,7 +23,7 @@ class Register extends React.Component {
     }
 
     onSubmitRegister = () => {
-        fetch('http://smartbrainapi-env-1.eba-nxss2c9h.ap-southeast-1.elasticbeanstalk.com/register', {
+        fetch('https://facerecognition-backend-w5bt.onrender.com/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

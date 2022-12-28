@@ -94,7 +94,7 @@ class App extends Component {
     // React wasn't finished updating the state. 
 
     this.setState({imageUrl: this.state.input});
-    fetch('http://smartbrainapi-env-1.eba-nxss2c9h.ap-southeast-1.elasticbeanstalk.com/imageurl', {
+    fetch('https://facerecognition-backend-w5bt.onrender.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -103,7 +103,7 @@ class App extends Component {
     })
     .then(response => response.json())
     .then(response => {
-      fetch('http://smartbrainapi-env-1.eba-nxss2c9h.ap-southeast-1.elasticbeanstalk.com/image', {
+      fetch('https://facerecognition-backend-w5bt.onrender.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
